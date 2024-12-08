@@ -1,0 +1,46 @@
+/* UploadPage.css */
+.upload-page {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upload-page h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .upload-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .upload-page form input[type="file"] {
+    padding: 0.5rem;
+  }
+  
+  .upload-page form label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+  }
+  
+  .upload-page form button {
+    padding: 0.5rem;
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-page form button:hover {
+    background-color: #21a1f1;
+  }
+  
