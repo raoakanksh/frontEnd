@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/UploadPage.css';
 
+const API_BASE_URL = "https://d6prg2rfa5.execute-api.us-east-2.amazonaws.com/test";
+
 function UploadPage({ setPackages }) {
   const [file, setFile] = useState(null);
   const [debloat, setDebloat] = useState(false);
@@ -22,12 +24,12 @@ function UploadPage({ setPackages }) {
     formData.append('debloat', debloat);
 
     try {
-      const response = await axios.post('http://localhost:5001/packages', formData, {
+      const response = await axios.post(`https://d6prg2rfa5.execute-api.us-east-2.amazonaws.com/test/packages`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
       alert('File uploaded successfully!');
-      const packagesResponse = await axios.get('http://localhost:5001/packages');
+      const packagesResponse = await axios.get(`https://d6prg2rfa5.execute-api.us-east-2.amazonaws.com/test/packages`);
       setPackages(packagesResponse.data);
     } catch (error) {
       if (error.response) {
