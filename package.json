@@ -2,6 +2,7 @@
   "name": "frontend461",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://raoakanksh.github.io/frontEnd/",
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
