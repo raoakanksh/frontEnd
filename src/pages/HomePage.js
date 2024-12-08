@@ -10,7 +10,8 @@ function HomePage() {
     // Fetch packages from the backend
     const fetchPackages = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/packages');
+        const API_BASE_URL = 'https://d6prg2rfa5.execute-api.us-east-2.amazonaws.com/test';
+        const response = await axios.get(`https://d6prg2rfa5.execute-api.us-east-2.amazonaws.com/test/packages`); // No headers needed
         setPackages(response.data); // Set the packages in state
       } catch (err) {
         setError('Failed to fetch packages. Please try again later.');
